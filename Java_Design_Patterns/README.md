@@ -2,9 +2,9 @@
 
 
 ## Example Java Files
-### src/com/in28minutes/patterns/AdapterPattern.java
+### src/com/jd/patterns/AdapterPattern.java
 ```java
-package com.in28minutes.patterns;
+package com.jd.patterns;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -46,9 +46,9 @@ public class AdapterPattern {
 	}
 }
 ```
-### src/com/in28minutes/patterns/BuilderPattern.java
+### src/com/jd/patterns/BuilderPattern.java
 ```java
-package com.in28minutes.patterns;
+package com.jd.patterns;
 public class BuilderPattern {
 	static class Coffee {
 		private Coffee(Builder builder) {
@@ -103,9 +103,9 @@ public class BuilderPattern {
 	}
 }
 ```
-### src/com/in28minutes/patterns/FactoryPattern.java
+### src/com/jd/patterns/FactoryPattern.java
 ```java
-package com.in28minutes.patterns;
+package com.jd.patterns;
 /*
  * instantiate an object from one among a set of classes based on some logic
  */
@@ -162,9 +162,9 @@ public class FactoryPattern {
 	}
 }
 ```
-### src/com/in28minutes/patterns/MySingletonUsingEnum.java
+### src/com/jd/patterns/MySingletonUsingEnum.java
 ```java
-package com.in28minutes.patterns;
+package com.jd.patterns;
 public enum MySingletonUsingEnum {
 	INSTANCE;
 	private MySingletonUsingEnum() {
@@ -175,9 +175,9 @@ public enum MySingletonUsingEnum {
 	}
 }
 ```
-### src/com/in28minutes/patterns/ObserverPattern.java
+### src/com/jd/patterns/ObserverPattern.java
 ```java
-package com.in28minutes.patterns;
+package com.jd.patterns;
 import java.util.ArrayList;
 import java.util.List;
 /*
@@ -221,9 +221,9 @@ Veena  notified
 	}
 }
 ```
-### src/com/in28minutes/patterns/SingletonPattern.java
+### src/com/jd/patterns/SingletonPattern.java
 ```java
-package com.in28minutes.patterns;
+package com.jd.patterns;
 public class SingletonPattern {
 	static class Singleton {
 		private static Singleton instance = new Singleton();
@@ -235,9 +235,9 @@ public class SingletonPattern {
 	}
 }
 ```
-### src/com/in28minutes/patterns/StatePattern.java
+### src/com/jd/patterns/StatePattern.java
 ```java
-package com.in28minutes.patterns;
+package com.jd.patterns;
 /*
  */
 public class StatePattern {
@@ -303,9 +303,9 @@ FanWallControl [current=com.rithus.patterns.StatePattern$SpeedLevel3@7ecec0c5]
 	}
 }
 ```
-### src/com/in28minutes/patterns/StrategyPattern.java
+### src/com/jd/patterns/StrategyPattern.java
 ```java
-package com.in28minutes.patterns;
+package com.jd.patterns;
 /*
  * Separates Strategy - how you do something - into a separate class.
  * Allows easy change of strategy at a later point.
