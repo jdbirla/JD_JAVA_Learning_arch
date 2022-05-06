@@ -3,7 +3,7 @@
 
 ## Example Java Files
 ### src/com/in28minutes/patterns/AdapterPattern.java
-```
+```java
 package com.in28minutes.patterns;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,7 +47,7 @@ public class AdapterPattern {
 }
 ```
 ### src/com/in28minutes/patterns/BuilderPattern.java
-```
+```java
 package com.in28minutes.patterns;
 public class BuilderPattern {
 	static class Coffee {
@@ -104,7 +104,7 @@ public class BuilderPattern {
 }
 ```
 ### src/com/in28minutes/patterns/FactoryPattern.java
-```
+```java
 package com.in28minutes.patterns;
 /*
  * instantiate an object from one among a set of classes based on some logic
@@ -163,7 +163,7 @@ public class FactoryPattern {
 }
 ```
 ### src/com/in28minutes/patterns/MySingletonUsingEnum.java
-```
+```java
 package com.in28minutes.patterns;
 public enum MySingletonUsingEnum {
 	INSTANCE;
@@ -176,7 +176,7 @@ public enum MySingletonUsingEnum {
 }
 ```
 ### src/com/in28minutes/patterns/ObserverPattern.java
-```
+```java
 package com.in28minutes.patterns;
 import java.util.ArrayList;
 import java.util.List;
@@ -222,7 +222,7 @@ Veena  notified
 }
 ```
 ### src/com/in28minutes/patterns/SingletonPattern.java
-```
+```java
 package com.in28minutes.patterns;
 public class SingletonPattern {
 	static class Singleton {
@@ -236,7 +236,7 @@ public class SingletonPattern {
 }
 ```
 ### src/com/in28minutes/patterns/StatePattern.java
-```
+```java
 package com.in28minutes.patterns;
 /*
  */
@@ -304,7 +304,7 @@ FanWallControl [current=com.rithus.patterns.StatePattern$SpeedLevel3@7ecec0c5]
 }
 ```
 ### src/com/in28minutes/patterns/StrategyPattern.java
-```
+```java
 package com.in28minutes.patterns;
 /*
  * Separates Strategy - how you do something - into a separate class.
