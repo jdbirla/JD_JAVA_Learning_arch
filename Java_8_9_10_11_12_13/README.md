@@ -1,6 +1,7 @@
 # Java_8_9_10_11_12_13
 - URL : https://www.udemy.com/course/java-latest-programming-from-zero-java13-java12-java11-java10-java9-j8/learn/lecture/17818988#overview
 
+## Section 2: Lambda Expressions
 ![Browser](Images/Screenshot_01.png)
 ![Browser](Images/Screenshot_02.png)
 ![Browser](Images/Screenshot_03.png)
@@ -14,4 +15,20 @@
 ![Browser](Images/Screenshot_11.png)
 ![Browser](Images/Screenshot_12.png)
 
+* Example 
+https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/lambda/SumOfNumbersUsingCallable.java
 
+---
+## Section 3: Functional Interfaces and Lambda
+
+![Browser](Images/Screenshot_13.png)
+![Browser](Images/Screenshot_14.png)
+![Browser](Images/Screenshot_15.png)
+![Browser](Images/Screenshot_16.png)
+![Browser](Images/Screenshot_17.png)
+![Browser](Images/Screenshot_18.png)
+
+* Consumer example 
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/ConsumerExample.java
+2. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/ConsumerExample2.java
+3. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/ConsumerExample3.java
