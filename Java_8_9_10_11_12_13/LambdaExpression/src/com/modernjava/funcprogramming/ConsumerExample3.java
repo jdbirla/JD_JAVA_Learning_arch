@@ -6,10 +6,10 @@ import java.util.function.LongConsumer;
 
 public class ConsumerExample3 {
     public static void main(String[] args) {
-        IntConsumer intConsumer = (a) -> System.out.println(a*10);
+        IntConsumer intConsumer = (a) -> System.out.println(a*1_234_567);
         intConsumer.accept(10);
 
-        LongConsumer longConsumer = (a) -> System.out.println(a * 10L);
+        LongConsumer longConsumer = (a) -> System.out.println(a * 1_234_567_800);
         longConsumer.accept(10L);
 
         DoubleConsumer doubleConsumer = (a) -> System.out.println(a * 10);
