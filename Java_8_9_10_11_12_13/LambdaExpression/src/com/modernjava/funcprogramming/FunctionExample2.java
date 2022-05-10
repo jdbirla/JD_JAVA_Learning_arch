@@ -24,4 +24,9 @@ public class FunctionExample2 {
 
         System.out.println(mapFunction.apply(Instructors.getAll()));
     }
+	
+	/*
+	{Mike=10, Syed=15, Anthony=15}
+
+	*/
 }
