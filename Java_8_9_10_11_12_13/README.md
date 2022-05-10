@@ -92,7 +92,11 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 
 1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/MethodReferenceExample.java
 2. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/ConvertToMethodReferenceExample.java
-3. 
 
+## Java8 FunctionalInterfaces with Methods
+
+![Browser](Images/Java8FunctionalInterfaces_withMethods.png)
+
+---
 
 
