@@ -20,5 +20,14 @@ public class UnaryOperatorExample {
         DoubleUnaryOperator doubleUnaryOperator = i -> i*10;
         System.out.println(doubleUnaryOperator.applyAsDouble(2000000.20000000));
     }
+	
+/*
+output
+1000
+1000
+1000
+100000000000000000
+2.0000002E7
+*/
 
 }

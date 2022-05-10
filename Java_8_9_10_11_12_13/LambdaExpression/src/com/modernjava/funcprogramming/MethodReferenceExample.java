@@ -7,6 +7,8 @@ public class MethodReferenceExample {
     public static void main(String[] args) {
         Predicate<Instructor> p1 = instructor -> instructor.isOnlineCourses();
         Predicate<Instructor> p2 = Instructor::isOnlineCourses;
+        Predicate<Instructor> p2 = Instructor::isOnlineCourses;
+
 
         Function<Integer, Double> sqrt= a -> Math.sqrt(a);
         Function<Integer, Double> sqrt1 = Math::sqrt;

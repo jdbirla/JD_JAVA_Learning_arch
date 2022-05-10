@@ -69,3 +69,30 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/BiFunctionExample.java
 
 ### Unary Operator
+
+![Browser](Images/Screenshot_21.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/UnaryOperatorExample.java
+
+### Binary Operator
+![Browser](Images/Screenshot_22.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/BinaryOperatorExample.java
+
+### Supplier Interface
+![Browser](Images/Screenshot_23.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/SupplierExample.java
+
+### Method Reference
+![Browser](Images/Screenshot_24.png)
+![Browser](Images/Screenshot_25.png)
+![Browser](Images/Screenshot_26.png)
+![Browser](Images/Screenshot_27.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/MethodReferenceExample.java
+2. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/ConvertToMethodReferenceExample.java
+3. 
+
+
+
