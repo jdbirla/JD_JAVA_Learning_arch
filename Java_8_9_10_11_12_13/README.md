@@ -98,5 +98,13 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 ![Browser](Images/Java8FunctionalInterfaces_withMethods.png)
 
 ---
+## Section 4: Lambda Variable Scope
+
+![Browser](Images/Screenshot_28.png)
+![Browser](Images/Screenshot_29.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/VariableScope.java
+
+---
 
 
