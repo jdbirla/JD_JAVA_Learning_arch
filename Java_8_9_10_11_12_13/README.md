@@ -1,5 +1,7 @@
 # Java_8_9_10_11_12_13
 - URL : https://www.udemy.com/course/java-latest-programming-from-zero-java13-java12-java11-java10-java9-j8/learn/lecture/17818988#overview
+- Common SQL Clauses and Their Equivalents in Java 8 Streams https://dzone.com/articles/common-sql-clauses-and-their-equivalents-in-java-8-1
+- ![Browser](Images/Java8FunctionalInterfaces_withMethods.png)
 
 ## Section 1: Introduction
 
@@ -95,7 +97,7 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 
 ## Java8 FunctionalInterfaces with Methods
 
-![Browser](Images/Java8FunctionalInterfaces_withMethods.png)
+
 
 ---
 ## Section 4: Lambda Variable Scope
