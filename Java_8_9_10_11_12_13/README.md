@@ -157,4 +157,32 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 
 ### filter
 
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/FilterExample.java
+
+### Reduce
+
+![Browser](Images/Screenshot_44.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/StreamReduceExample.java
+2. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/StreamReduceExample2.java
+
+### map + filter + reduce
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/StreamMapFilterReduceExample.java
+
+### Max 
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/StreamMaxExample.java
+
+### Min 
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/StreamMinExample.java
+
+### limit and skip
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/StreamLimitAndSkipExample.java
+
+### findAny() and findFirst()
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/StreamFindAnyAndFirstExample.java
+
+---
+## Section 8: Streams Generators
+
 
