@@ -20,9 +20,11 @@ public class StreamExample {
         list.stream().filter(p1).filter(p2);
 
         Map<String, List<String>> map = list.stream()
+        		                .peek(e-> System.out.println("after stream  ==>" +e + "\n"))
                                 .filter(p1)
+        		                .peek(e-> System.out.println("after P1  ==>" +e + "\n"))
                                 .filter(p2)
-                                .peek(s-> System.out.println(s))
+        		                .peek(e-> System.out.println("after P2  ==>" +e + "\n"))
                                 .collect(Collectors.toMap(Instructor::getName, Instructor::getCourses));
 
         //System.out.println(map);

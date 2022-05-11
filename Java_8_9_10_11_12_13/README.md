@@ -124,4 +124,15 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 ![Browser](Images/Screenshot_38.png)
 ![Browser](Images/Screenshot_39.png)
 
-1. 
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/StreamExample.java
+
+![Browser](Images/Screenshot_40.png)
+![Browser](Images/Screenshot_41.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/StreamVsCollectionExample.java
+
+---
+## Section 7: Streams Operations
+
+
+
