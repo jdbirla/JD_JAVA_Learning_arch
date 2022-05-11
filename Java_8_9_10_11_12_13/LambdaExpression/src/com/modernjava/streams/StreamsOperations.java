@@ -27,15 +27,30 @@ public class StreamsOperations {
                 .collect(Collectors.toList());
         System.out.println(courses);
 
-        //anymatch, allmatch and nonmatch
-
+        //anymatch, 
 
         boolean match = Instructors.getAll().stream()
                 .map(Instructor::getCourses)
                 .flatMap(List::stream)
-                .noneMatch(s -> s.startsWith("J"));
-
+                .anyMatch(s-> s.startsWith("J"));
+        
         System.out.println(match);
+        
+        boolean allmatch = Instructors.getAll().stream()
+                .map(Instructor::getCourses)
+                .flatMap(List::stream)
+                .allMatch(s-> s.startsWith("J"));
+        
+        System.out.println(allmatch);
+        
+        
+        boolean nonematch = Instructors.getAll().stream()
+                .map(Instructor::getCourses)
+                .flatMap(List::stream)
+                .noneMatch(s-> s.startsWith("J"));
+        
+        System.out.println(nonematch);
+
 
 
 
