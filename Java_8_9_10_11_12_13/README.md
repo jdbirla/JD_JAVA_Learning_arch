@@ -112,4 +112,16 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 1. https://github.com/jdbirla/JD_JAVA_Learning/tree/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/funcprogramming/realexample
 
 ---
+## Section 6: Streams
 
+![Browser](Images/Screenshot_31.png)
+![Browser](Images/Screenshot_32.png)
+![Browser](Images/Screenshot_33.png)
+![Browser](Images/Screenshot_34.png)
+![Browser](Images/Screenshot_35.png)
+![Browser](Images/Screenshot_36.png)
+![Browser](Images/Screenshot_37.png)
+![Browser](Images/Screenshot_38.png)
+![Browser](Images/Screenshot_39.png)
+
+1. 
