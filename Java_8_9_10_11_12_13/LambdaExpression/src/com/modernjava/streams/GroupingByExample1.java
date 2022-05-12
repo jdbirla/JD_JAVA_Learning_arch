@@ -36,3 +36,14 @@ public class GroupingByExample1 {
         });
     }
 }
+/*
+-output
+result = {4=[Syed, Mike, Gene], 5=[Jenny], 6=[Rajeev]}
+-----------------
+key = F value = [Instructor{name='Jenny', yearsOfExperience=5, title='Engineer', gender='F', onlineCourses=false, courses=[Multi-Threaded Programming, CI/CD, Unit Testing]}]
+key = M value = [Instructor{name='Mike', yearsOfExperience=10, title='Software Developer', gender='M', onlineCourses=true, courses=[Java Programming, C++ Programming, Python Programming]}, Instructor{name='Gene', yearsOfExperience=6, title='Manager', gender='M', onlineCourses=false, courses=[C++ Programming, C Programming, React Native]}, Instructor{name='Anthony', yearsOfExperience=15, title='Senior Developer', gender='M', onlineCourses=true, courses=[Java Programming, Angular Programming, React Native]}, Instructor{name='Syed', yearsOfExperience=15, title='Principal Engineer', gender='M', onlineCourses=true, courses=[Java Programming, Java Multi-Threaded Programming, React Native]}]
+-----------------
+key = JUNIOR value = [Instructor{name='Mike', yearsOfExperience=10, title='Software Developer', gender='M', onlineCourses=true, courses=[Java Programming, C++ Programming, Python Programming]}, Instructor{name='Jenny', yearsOfExperience=5, title='Engineer', gender='F', onlineCourses=false, courses=[Multi-Threaded Programming, CI/CD, Unit Testing]}, Instructor{name='Gene', yearsOfExperience=6, title='Manager', gender='M', onlineCourses=false, courses=[C++ Programming, C Programming, React Native]}]
+key = SENIOR value = [Instructor{name='Anthony', yearsOfExperience=15, title='Senior Developer', gender='M', onlineCourses=true, courses=[Java Programming, Angular Programming, React Native]}, Instructor{name='Syed', yearsOfExperience=15, title='Principal Engineer', gender='M', onlineCourses=true, courses=[Java Programming, Java Multi-Threaded Programming, React Native]}]
+
+*/

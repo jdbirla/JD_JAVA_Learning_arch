@@ -55,7 +55,21 @@ public class GroupingMinMaxAvgExample {
         maxInstructors3.forEach((key, value) ->
                 System.out.println("key = " + key + " value = " + value));
 
+/*
 
+key = false value = Optional[Instructor{name='Gene', yearsOfExperience=6, title='Manager', gender='M', onlineCourses=false, courses=[C++ Programming, C Programming, React Native]}]
+key = true value = Optional[Instructor{name='Anthony', yearsOfExperience=15, title='Senior Developer', gender='M', onlineCourses=true, courses=[Java Programming, Angular Programming, React Native]}]
+---------
+key = false value = Instructor{name='Gene', yearsOfExperience=6, title='Manager', gender='M', onlineCourses=false, courses=[C++ Programming, C Programming, React Native]}
+key = true value = Instructor{name='Anthony', yearsOfExperience=15, title='Senior Developer', gender='M', onlineCourses=true, courses=[Java Programming, Angular Programming, React Native]}
+---------
+key = false value = 5.5
+key = true value = 13.333333333333334
+---------
+key = false value = IntSummaryStatistics{count=2, sum=11, min=5, average=5.500000, max=6}
+key = true value = IntSummaryStatistics{count=3, sum=40, min=10, average=13.333333, max=15}
+
+*/
 
 
     }

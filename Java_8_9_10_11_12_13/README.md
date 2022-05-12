@@ -230,8 +230,39 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 
 1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/CollectorMappingExample.java
 
+### minby() and maxBy()
 
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/CollectorsMinMaxExample.java
 
+### summingInt() and averagingInt()
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/CollectorSummingAveragingExample.java
+
+### groupingBy
+![Browser](Images/Screenshot_53.png)
+![Browser](Images/Screenshot_54.png)
+![Browser](Images/Screenshot_55.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/GroupingByExample1.java
+
+![Browser](Images/Screenshot_56.png)
+
+2. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/GroupingExample2.java
+
+![Browser](Images/Screenshot_57.png)
+
+3. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/GroupingExample3.java
+
+### GroupingMinMaxAvgExample
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/GroupingMinMaxAvgExample.java
+
+#### partitioningBy()
+![Browser](Images/Screenshot_58.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/PartitioningByExample.java
+
+---
 
 
 
