@@ -46,7 +46,37 @@ public class CollectorMappingExample {
         });
 
 
+/*
+-Output
+Mike
+Jenny
+Gene
+Anthony
+Syed
+Mike
+Jenny
+Gene
+Anthony
+Syed
+-----------------------------
+[Instructor{name='Mike', yearsOfExperience=10, title='Software Developer', gender='M', onlineCourses=true, courses=[Java Programming, C++ Programming, Python Programming]}, Instructor{name='Jenny', yearsOfExperience=5, title='Engineer', gender='F', onlineCourses=false, courses=[Multi-Threaded Programming, CI/CD, Unit Testing]}, Instructor{name='Gene', yearsOfExperience=6, title='Manager', gender='M', onlineCourses=false, courses=[C++ Programming, C Programming, React Native]}, Instructor{name='Anthony', yearsOfExperience=15, title='Senior Developer', gender='M', onlineCourses=true, courses=[Java Programming, Angular Programming, React Native]}, Instructor{name='Syed', yearsOfExperience=15, title='Principal Engineer', gender='M', onlineCourses=true, courses=[Java Programming, Java Multi-Threaded Programming, React Native]}]
+key = 5 value = [Jenny]
+key = 6 value = [Gene]
+key = 10 value = [Mike]
+key = 15 value = [Anthony, Syed]
+-----------------------------
+key = 5 value = [Instructor{name='Jenny', yearsOfExperience=5, title='Engineer', gender='F', onlineCourses=false, courses=[Multi-Threaded Programming, CI/CD, Unit Testing]}]
+key = 6 value = [Instructor{name='Gene', yearsOfExperience=6, title='Manager', gender='M', onlineCourses=false, courses=[C++ Programming, C Programming, React Native]}]
+key = 10 value = [Instructor{name='Mike', yearsOfExperience=10, title='Software Developer', gender='M', onlineCourses=true, courses=[Java Programming, C++ Programming, Python Programming]}]
+key = 15 value = [Instructor{name='Anthony', yearsOfExperience=15, title='Senior Developer', gender='M', onlineCourses=true, courses=[Java Programming, Angular Programming, React Native]}, Instructor{name='Syed', yearsOfExperience=15, title='Principal Engineer', gender='M', onlineCourses=true, courses=[Java Programming, Java Multi-Threaded Programming, React Native]}]
+-----------------------------
+key = 5 value = [Instructor{name='Jenny', yearsOfExperience=5, title='Engineer', gender='F', onlineCourses=false, courses=[Multi-Threaded Programming, CI/CD, Unit Testing]}]
+key = 6 value = [Instructor{name='Gene', yearsOfExperience=6, title='Manager', gender='M', onlineCourses=false, courses=[C++ Programming, C Programming, React Native]}]
+key = 10 value = [Instructor{name='Mike', yearsOfExperience=10, title='Software Developer', gender='M', onlineCourses=true, courses=[Java Programming, C++ Programming, Python Programming]}]
+key = 15 value = [Instructor{name='Anthony', yearsOfExperience=15, title='Senior Developer', gender='M', onlineCourses=true, courses=[Java Programming, Angular Programming, React Native]}, Instructor{name='Syed', yearsOfExperience=15, title='Principal Engineer', gender='M', onlineCourses=true, courses=[Java Programming, Java Multi-Threaded Programming, React Native]}]
 
+
+*/
 
 
 
