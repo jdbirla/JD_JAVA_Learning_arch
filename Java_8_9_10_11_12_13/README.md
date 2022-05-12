@@ -228,6 +228,9 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 ### mapping
 ![Browser](Images/Screenshot_52.png)
 
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/CollectorMappingExample.java
+
+
 
 
 
