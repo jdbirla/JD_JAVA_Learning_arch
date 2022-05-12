@@ -213,6 +213,13 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 ---
 ## Section 10: Collectors Operations
 
+### joining
+![Browser](Images/Screenshot_49.png)
+![Browser](Images/Screenshot_50.png)
+
+1.  https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/JoiningExample.java
+
+
 
 
 

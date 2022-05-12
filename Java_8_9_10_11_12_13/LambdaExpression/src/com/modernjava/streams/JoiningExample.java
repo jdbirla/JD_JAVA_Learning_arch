@@ -17,6 +17,7 @@ public class JoiningExample {
         result = Stream.of ("E", "F", "G", "H").collect(Collectors.
                 joining(",","{","}" ));
         System.out.println(result);
+        System.out.println("jd =>" +Stream.of ("E", "F", "G", "H").collect(Collectors.joining("','", "'", "'")));
 
         //instructors names seperated by ' and prefix { and suffix }
         String namesConcatenated = Instructors.getAll().stream()
