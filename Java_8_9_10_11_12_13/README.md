@@ -185,4 +185,38 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 ---
 ## Section 8: Streams Generators
 
+![Browser](Images/Screenshot_45.png)
+![Browser](Images/Screenshot_46.png)
+![Browser](Images/Screenshot_47.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/StreamFactoryMethodExample.java
+
+---
+## Section 9: Numeric Streams
+
+### intStream,LongStream,DoubleStream
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/IntStreamExample.java
+2. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/LongStreamExample.java
+3. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/DoubleStreamExample.java
+
+### Numeric Stream Aggregate Functions
+
+![Browser](Images/Screenshot_48.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/NumericStreamAggregateExample.java
+
+### Boxing and Unboxing
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/BoxingUnBoxingExample.java
+2. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/MapToObjLongDoubleExample.java
+
+---
+## Section 10: Collectors Operations
+
+
+
+
+
+
+
 
