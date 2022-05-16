@@ -12,3 +12,9 @@ public class OptionalIfIsExample {
         stringOptional.ifPresent(s -> System.out.println("s = " + s));
     }
 }
+/*
+
+stringOptional = Optional[Hello World]
+s = Hello World
+
+*/

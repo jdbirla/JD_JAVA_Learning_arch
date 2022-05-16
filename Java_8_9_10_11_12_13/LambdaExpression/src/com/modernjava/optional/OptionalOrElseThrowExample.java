@@ -24,3 +24,13 @@ public class OptionalOrElseThrowExample {
         }
     }
 }
+
+/*
+result = -1
+result - orElseGet = -1
+java.lang.Exception
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.modernjava.optional.OptionalOrElseThrowExample.main(OptionalOrElseThrowExample.java:20)
+
+
+*/

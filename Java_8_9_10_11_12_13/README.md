@@ -278,6 +278,14 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 ---
 ## Section 12: Optional java8+
 
+![Browser](Images/Screenshot_62.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/optional/OptionalExample.java
+2. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/optional/OptionalIfIsExample.java
+3. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/optional/OptionalOfEmptyExample.java
+4. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/optional/OptionalOrElseThrowExample.java
+
+---
 
 
 
