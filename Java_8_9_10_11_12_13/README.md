@@ -263,6 +263,20 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/streams/PartitioningByExample.java
 
 ---
+## Section 11: Parallel Stream
+
+![Browser](Images/Screenshot_59.png)
+
+![Browser](Images/Screenshot_60.png)
+
+![Browser](Images/Screenshot_61.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/parallelstream/ParallelStreamExample.java
+2. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/parallelstream/StreamPerformanceExample.java
+3. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/parallelstream/StreamPerformanceExample1.java
+
+---
+## Section 12: Optional java8+
 
 
 
