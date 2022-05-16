@@ -286,6 +286,32 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 4. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/optional/OptionalOrElseThrowExample.java
 
 ---
+## Section 13: Default and Static Methods ot Interfaces 
+
+![Browser](Images/Screenshot_63.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/tree/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/defaults
+
+---
+## Section 14: New DateTime APIs
+
+---
+## Section 15:Java Shell(REPL)- Java9+
+![Browser](Images/Screenshot_64.png)
+
+![Browser](Images/Screenshot_65.png)
+
+![Browser](Images/Screenshot_66.png)
+
+![Browser](Images/Screenshot_67.png)
+
+![Browser](Images/Screenshot_68.png)
+
+
+---
+## Section 16 : Module System- Java9+
+
+
 
 
 
