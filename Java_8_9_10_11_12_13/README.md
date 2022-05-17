@@ -311,6 +311,29 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 ---
 ## Section 16 : Module System- Java9+
 
+![Browser](Images/Screenshot_69.png)
+
+![Browser](Images/Screenshot_70.png)
+
+![Browser](Images/Screenshot_71.png)
+
+---
+## Section 17: Factory Methods for Collection - Java9+
+
+![Browser](Images/Screenshot_72.png)
+
+![Browser](Images/Screenshot_73.png)
+
+![Browser](Images/Screenshot_74.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/factorymethods/FactoryMethodsExample.java
+
+---
+## Section 18: Try-with-resources - Java9+
+
+
+
+
 
 
 
