@@ -344,6 +344,76 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 ---
 ## Section 19: Try Interference with var - Java10+
 
+![Browser](Images/Screenshot_78.png)
+
+![Browser](Images/Screenshot_79.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/javaimprovements/TypeInterferenceExample.java
+
+
+---
+## Section 20: GC1 Improvements- Java 10+
+
+---
+## Section 21: var with Lambda - Java11+
+
+![Browser](Images/Screenshot_80.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/javaimprovements/VarWithLambdaExample.java
+
+---
+## Section 22: Epsilon GC - Java11+
+
+![Browser](Images/Screenshot_81.png)
+
+![Browser](Images/Screenshot_82.png)
+
+
+---
+## Section 23: New Http Client - Java11+
+
+![Browser](Images/Screenshot_83.png)
+
+![Browser](Images/Screenshot_84.png)
+
+![Browser](Images/Screenshot_85.png)
+
+![Browser](Images/Screenshot_86.png)
+
+![Browser](Images/Screenshot_87.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/javaimprovements/HttpClientExample.java
+2. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/javaimprovements/AsyncHttpClient.java
+
+
+---
+## Section 24: Switch Expression - Java12+
+
+![Browser](Images/Screenshot_88.png)
+
+![Browser](Images/Screenshot_89.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/java9improvements/SwitchStatementExample.java
+2. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/java9improvements/SwitchExpressionsExample1.java
+3. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/java9improvements/SwitchExpressionExample2.java
+---
+## Section 25: Switch Expression Enhancements- Java13+
+
+![Browser](Images/Screenshot_90.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/java9improvements/SwitchExpressionEnhancementExample.java
+---
+## Section 26: Text Blocks - Java13+
+
+![Browser](Images/Screenshot_91.png)
+
+![Browser](Images/Screenshot_92.png)
+
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/java9improvements/MultiLineTextBlockExample.java
+
+---
+
+
 
 
 
