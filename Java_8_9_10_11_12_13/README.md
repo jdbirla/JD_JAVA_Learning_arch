@@ -331,9 +331,18 @@ https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/Lam
 ---
 ## Section 18: Try-with-resources - Java9+
 
+![Browser](Images/Screenshot_75.png)
+
+![Browser](Images/Screenshot_76.png)
+
+![Browser](Images/Screenshot_77.png)
 
 
 
+1. https://github.com/jdbirla/JD_JAVA_Learning/blob/master/Java_8_9_10_11_12_13/LambdaExpression/src/com/modernjava/java9improvements/TryWithResourcesExample.java
+
+---
+## Section 19: Try Interference with var - Java10+
 
 
 
