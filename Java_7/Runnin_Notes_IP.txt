@@ -2,4 +2,4 @@ Question
 
 1. enum, enumeration 
 2. noclassdeffounderror vs classnotfoundexception
-3. 
+3. volitile vs static
