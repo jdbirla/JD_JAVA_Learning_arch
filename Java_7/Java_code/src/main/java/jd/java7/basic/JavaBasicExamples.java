@@ -1,9 +1,12 @@
 package jd.java7.basic;
+import static java.lang.System.out;
+
+import java.io.PrintStream;
 
 public class JavaBasicExamples {
-	
 
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		 final  int i=0;
 		// TODO Auto-generated method stub
      System.out.println("Hello Prabu, Gurudev, ....Please give me success for my hardwork");
@@ -20,6 +23,15 @@ public class JavaBasicExamples {
      System.out.println(s1==s2);
      System.out.println(s1==s4);
 
+=======
+
+		System.out.println("Hello Prabu, Gurudev, ....Please give me success for my hardwork");
+   int x =10;
+		int y = x++;
+		out.println(y);
+		out.println(x);
+     
+>>>>>>> 7775ca90b4fd380d8a58c8e8217cd1c155bdc73a
 	}
 
 }
