@@ -1,6 +1,30 @@
 # Java_8_9_10_11_12_13
 - URL : https://www.udemy.com/course/java-latest-programming-from-zero-java13-java12-java11-java10-java9-j8/learn/lecture/17818988#overview
 - Common SQL Clauses and Their Equivalents in Java 8 Streams https://dzone.com/articles/common-sql-clauses-and-their-equivalents-in-java-8-1
+
+|Column 1|Column 2 
+|---|---|---|  
+|Row 1 Column1| Row 1 Column 2
+|Row 2 Column1| Row 2 Column 2
+
+
+|SQL|JAVA API
+|---|---|---|  
+|FROM	|of(),stream()
+|WHERE	|filter()
+|	SELECT RESULT	|	Collect(Collector.toList()) //toSet(),toCollection(Supplier<C> collectionFactory)
+|	Concatinate all the colums	|productList.stream().map(Product::getName).collect(Collectors.joining("", "", ""["", ""]""));"
+|	Sum	|int summingPrice = productList.stream() .collect(Collectors.summingInt(Product::getPrice));"
+|	Average	|double averagePrice = productList.stream()  .collect(Collectors.averagingInt(Product::getPrice));
+|	Collecting statistical information	|	"IntSummaryStatistics statistics = productList.stream().collect(Collectors.summarizingInt(Product::getPrice));"
+|	Group BY	|Map<Integer, List<Product>> collectorMapOfLists=productList.stream()  .collect(Collectors.groupingBy(Product::getPrice));"
+|	PartitionBy	|	"Map<Boolean, List<Product>> mapPartioned = productList.stream().collect(Collectors.partitioningBy(element -> element.getPrice() > 15));"
+|	Group BY and select from Outer Query	|	Set<Product> unmodifiableSet = productList.stream() .collect(Collectors.collectingAndThen(Collectors.toSet(), Collections::unmodifiableSet));
+  
+  
+
+
+
 - ![Browser](Images/Java8FunctionalInterfaces_withMethods.png)
 
 ## Section 1: Introduction
