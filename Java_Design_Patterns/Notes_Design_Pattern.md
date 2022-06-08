@@ -16,8 +16,7 @@ src : https://refactoring.guru/design-patterns/catalog
 |Structural Design Pattern|Facade Pattern|```java WebExplorerHelperFacade.generateReports("firefox", "html", test); WebExplorerHelperFacade.generateReports("firefox", "junit", test);```| 
 |Structural Design Pattern|Proxy Pattern| ```java   DatabaseExecuter nonAdminExecuter = new DatabaseExecuterProxy("NonAdmin", "Admin@123");``` | 
 |--------------------------|-----------------|-----------------|
-|Behavioral Design Pattern|Observer Pattern| ```java     TV sonyOldRemote = new Sony(new OldRemote());  TV sonyNewRemote = new Sony(new NewRemote());```
-| 
+|Behavioral Design Pattern|Observer Pattern| ```java     TV sonyOldRemote = new Sony(new OldRemote());  TV sonyNewRemote = new Sony(new NewRemote());```| 
 
 ### 1.Creational Design Pattern
 - Factory Pattern
