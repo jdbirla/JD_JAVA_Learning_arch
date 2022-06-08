@@ -628,6 +628,440 @@ public class DecoratorPatterTest {
   }
 }
 ```
+### Flyweight Pattern
+![image](https://user-images.githubusercontent.com/69948118/172502751-84b097ca-0247-4eb8-bbe0-d1e6087e49ac.png)
+![image](https://user-images.githubusercontent.com/69948118/172503023-5177761a-f9c8-445c-be99-4a84d069b378.png)
+
+```java
+package flyweight;
+
+import java.util.HashMap;
+import java.util.Random;
+
+interface Employee {
+  public void assignSkill(String skill);
+  public void task();
+}
+
+class Developer implements Employee {
+
+  private final String JOB;
+  private String skill;
+  
+  public Developer() {
+    JOB = "Fix the issue";
+  }
+  
+  @Override
+  public void assignSkill(String skill) {
+    this.skill = skill;
+  }
+
+  @Override
+  public void task() {
+    System.out.println("Developer with skill: " + this.skill + " with Job: " + JOB);
+  }
+  
+}
+
+class Tester implements Employee {
+
+  private final String JOB;
+  
+  private String skill;
+  
+  public Tester() {
+    JOB = "Test the issue";
+  }
+  
+  @Override
+  public void assignSkill(String skill) {
+    this.skill = skill;
+  }
+
+  @Override
+  public void task() {
+    System.out.println("Tester with Skill: " + this.skill + " with Job: " + JOB);
+  }
+  
+}
 
 
+class EmployeeFactory {
+  private static HashMap<String, Employee> m = new HashMap<String, Employee>();
+  
+  public static Employee getEmployee(String type) {
+    Employee p = null;
+    if(m.get(type) != null) {
+      p = m.get(type);
+    } else {
+      switch(type) {
+      case "Developer": 
+        System.out.println("Developer Created");
+        p = new Developer();
+        break;
+      case "Tester":
+        System.out.println("Tester Created");
+        p = new Tester();
+        break;
+      default:
+        System.out.println("No Such Employee");
+      }
+      
+      m.put(type, p);
+    }
+    return p;
+  }
+}
+
+public class Engineering {
+
+  private static String employeeType[] = {"Developer", "Tester"};
+  private static String skills[] = {"Java", "C++", ".Net", "Python"};
+  
+  public static void main(String[] args) {
+    for(int i = 0; i < 10; i++) {
+      Employee e = EmployeeFactory.getEmployee(getRandEmployee());
+      
+      e.assignSkill(getRandSkill());
+      
+      e.task();
+    }
+  }
+  
+  public static String getRandEmployee() {
+    Random r = new Random();
+    int randInt = r.nextInt(employeeType.length);
+    
+    return employeeType[randInt];
+  }
+  
+  public static String getRandSkill() {
+    Random r = new Random();
+    int randInt = r.nextInt(skills.length);
+    
+    return skills[randInt];
+  }
+
+}
+```
+---
+### Adapter Pattern
+
+![image](https://user-images.githubusercontent.com/69948118/172504101-0f45548d-e3b0-490b-a82d-c1ba94b625a0.png)
+![image](https://user-images.githubusercontent.com/69948118/172504252-dbc19ef6-788c-47de-9343-428219310387.png)
+![image](https://user-images.githubusercontent.com/69948118/172504385-aa594389-8c4b-47c6-906e-57cc4508910f.png)
+
+```java
+package adapter;
+
+interface WebDriver {
+  public void getElement();
+  public void selectElement();
+}
+
+
+class ChromeDriver implements WebDriver {
+
+  @Override
+  public void getElement() {
+    System.out.println("Get element from ChromeDriver");
+  }
+
+  @Override
+  public void selectElement() {
+    System.out.println("Select element from ChromeDriver");
+    
+  }
+  
+}
+
+class IEDriver {
+
+  public void findElement() {
+    System.out.println("Find element from IEDriver");
+  }
+
+  public void clickElement() {
+    System.out.println("Click element from IEDriver");
+  }
+  
+}
+
+class WebDriverAdapter implements WebDriver {
+
+  IEDriver ieDriver;
+  
+  public WebDriverAdapter(IEDriver ieDriver) {
+    this.ieDriver = ieDriver;
+  }
+  
+  @Override
+  public void getElement() {
+    ieDriver.findElement();
+    
+  }
+
+  @Override
+  public void selectElement() {
+    ieDriver.clickElement();
+  }
+  
+}
+
+public class AdapterDesignPattern {
+
+  public static void main(String[] args) {
+    ChromeDriver a = new ChromeDriver();
+    a.getElement();
+    a.selectElement();
+    
+    IEDriver e = new IEDriver();
+    e.findElement();
+    e.clickElement();
+    
+    WebDriver wID = new WebDriverAdapter(e);
+    wID.getElement();
+    wID.selectElement();
+    
+  }
+
+}
+```
+### Bridge Pattern
+![image](https://user-images.githubusercontent.com/69948118/172505388-84ed0d19-924b-4413-bd7b-3ffb1fd46b6d.png)
+![image](https://user-images.githubusercontent.com/69948118/172505541-7bd73d74-1586-4622-b9bb-09e7464a16b3.png)
+
+```java
+package bridge;
+
+abstract class TV {
+  Remote remote;
+  
+  TV(Remote r) {
+    this.remote = r;
+  }
+  
+  abstract void on();
+  abstract void off();
+}
+
+class Sony extends TV {
+  Remote remoteType;
+  Sony(Remote r) {
+    super(r);
+    this.remoteType = r;
+  }
+  
+  public void on(){
+    System.out.print("Sony TV ON: ");
+    remoteType.on();
+  }
+    
+  public void off(){
+    System.out.print("Sony TV OFF: ");
+    remoteType.off();
+  }
+}
+    
+class Philips extends TV {
+  Remote remoteType;
+  
+  Philips(Remote r) {
+    super(r);
+    this.remoteType = r;
+  }
+  
+  public void on(){
+    System.out.print("Philips TV ON: ");
+    remoteType.on();
+  }
+    
+  public void off(){
+    System.out.print("Philips TV OFF: ");
+    remoteType.off();
+  }
+}
+
+interface Remote {
+  public void on();
+  public void off();
+}
+
+class OldRemote implements Remote {
+
+  @Override
+  public void on() {
+    System.out.println("ON with Old Remote");
+  }
+
+  @Override
+  public void off() {
+    System.out.println("OFF with old Remote");
+  }
+  
+}
+
+class NewRemote implements Remote {
+
+  @Override
+  public void on() {
+    System.out.println("ON with New Remote");
+  }
+
+  @Override
+  public void off() {
+    System.out.println("OFF with New Remote");
+  }
+  
+}
+
+public class Client {
+  public static void main(String[] args) {
+    TV sonyOldRemote = new Sony(new OldRemote());
+    sonyOldRemote.on();
+    sonyOldRemote.off();
+    System.out.println();
+    
+    TV sonyNewRemote = new Sony(new NewRemote());
+    sonyNewRemote.on();
+    sonyNewRemote.off();
+    System.out.println();
+    
+    TV philipsOldRemote = new Philips(new OldRemote());
+    philipsOldRemote.on();
+    philipsOldRemote.off();
+    System.out.println();
+    
+    TV philipsNewRemote = new Philips(new NewRemote());
+    philipsNewRemote.on();
+    philipsNewRemote.off();
+    
+  }
+}
+```
+---
+## 3. Behavioral Design Pattern
+### Observer Pattern
+![image](https://user-images.githubusercontent.com/69948118/172506194-7a88df9f-6fa7-4d07-ac68-18157555362d.png)
+
+```java
+package observer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+interface Subject {
+  void register(Observer obj);
+  void unregister(Observer obj);
+  void notifyObservers();
+}
+
+class DeliveryData implements Subject {
+
+  private List<Observer> observers;
+  private String location;
+  
+  public DeliveryData() {
+    this.observers = new ArrayList<>();
+  }
+  
+  @Override
+  public void register(Observer obj) {
+    observers.add(obj);
+  }
+
+  @Override
+  public void unregister(Observer obj) {
+      observers.remove(obj);
+  }
+
+  @Override
+  public void notifyObservers() {
+    for(Observer obj : observers) {
+      obj.update(location);
+    }
+  }
+
+  public void locationChanged() {
+    this.location = getLocation();
+    notifyObservers();
+  }
+  
+  public String getLocation() {
+    return "YPlace";
+  }
+}
+
+
+interface Observer {
+  public void update(String location);
+}
+
+
+class Seller implements Observer {
+  private String location;
+  
+  @Override
+  public void update(String location) {
+    this.location = location;
+    showLocation();
+  }
+
+  public void showLocation() {
+    System.out.println("Notification at Seller - Current Location: " + location);
+  }
+}
+
+class User implements Observer {
+  private String location;
+  
+  @Override
+  public void update(String location) {
+    this.location = location;
+    showLocation();
+  }
+
+  public void showLocation() {
+    System.out.println("Notification at User - Current Location: " + location);
+  }
+}
+
+class DeliveryWarehouseCenter implements Observer {
+  private String location;
+  
+  @Override
+  public void update(String location) {
+    this.location = location;
+    showLocation();
+  }
+
+  public void showLocation() {
+    System.out.println("Notification at Warehouse - Current Location: " + location);
+  }
+}
+
+public class ObserverPatternTest {
+
+  public static void main(String[] args) {
+    DeliveryData topic = new DeliveryData();
+    
+    Observer obj1 = new Seller();
+    Observer obj2 = new User();
+    Observer obj3 = new DeliveryWarehouseCenter();
+    
+    topic.register(obj1);
+    topic.register(obj2);
+    topic.register(obj3);
+    
+    topic.locationChanged();
+    
+    topic.unregister(obj3);
+    
+    System.out.println();
+    topic.locationChanged();
+    
+  }
+}
+```
 
