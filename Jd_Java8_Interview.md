@@ -399,9 +399,114 @@ List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8);
      Map<Boolean, List<Student>> passingFailing =
          students.stream()
                  .collect(Collectors.partitioningBy(s -> s.getGrade() >= PASS_THRESHOLD));
+		 
+   //mapping 
+   
+    //mapping
+        namesList= Instructors.getAll().stream()
+                .collect(Collectors.mapping(Instructor::getName, Collectors.toList()));
+
+        namesList.forEach(System.out::println);
+
+        //Instructors by their years of experience
+        System.out.println("-----------------------------");
+        System.out.println(Instructors.getAll());
+        Map<Integer, List<String>> mapYearsOfExperienceAndNames = Instructors.getAll().stream()
+                .collect(Collectors.groupingBy(Instructor::getYearsOfExperience,
+                        Collectors.mapping(Instructor::getName, Collectors.toList())));
+        Map<Integer, List<Instructor>> mapYearsOfExperienceAndNames1 = Instructors.getAll().stream()
+                .collect(Collectors.groupingBy(Instructor::getYearsOfExperience, Collectors.toList()));
+        Map<Integer, List<Instructor>> mapYearsOfExperienceAndNames2 = Instructors.getAll().stream()
+                .collect(Collectors.groupingBy(Instructor::getYearsOfExperience));
+        mapYearsOfExperienceAndNames.forEach((key,value) ->{
+            System.out.println("key = " + key + " value = " + value);
+        });
+        System.out.println("-----------------------------");
+	
+	//minby() and maxBy()
+	//instructor with minimum years of experience
+        Optional<Instructor> instructor = Instructors.getAll().stream()
+                .collect(Collectors.minBy(Comparator.comparing(
+                        Instructor::getYearsOfExperience)));
+        System.out.println("instructor = " + instructor);
+        System.out.println("---------------");
+
+        instructor = Instructors.getAll().stream()
+                .min(Comparator.comparing(Instructor::getYearsOfExperience));
+        System.out.println("instructor = " + instructor);
+
+       instructor = Instructors.getAll().stream()
+                .collect(Collectors.maxBy(Comparator.comparing(
+                        Instructor::getYearsOfExperience)));
+        System.out.println("instructor = " + instructor);
+        System.out.println("---------------");
+
+        instructor = Instructors.getAll().stream()
+                .max(Comparator.comparing(Instructor::getYearsOfExperience));
+        System.out.println("instructor = " + instructor);
+	
+//Grouping BY
+   //grouping by instructors by their gender
+        Map<String, List<Instructor>> instructorByGender = Instructors.getAll()
+                .stream().collect(Collectors.groupingBy(Instructor::getGender));
+
+ //grouping by length of string and also checking that the names contains e
+        //and only return those name which has e in it
+        List<String> name = List.of("Sid", "Mike", "Jenny", "Gene", "Rajeev");
+        Map<Integer, List<String>> result = name.stream()
+                .collect(Collectors.groupingBy(String::length, Collectors
+                        .filtering(s-> s.contains("e"),Collectors.toList())));
+//grouping by length of string and also checking that the names contains e
+        //and only return those name which has e in it
+        List<String> name = List.of("Sid", "Mike", "Jenny", "Gene", "Rajeev");
+        LinkedHashMap<Integer, List<String>> result = name.stream()
+                .collect(Collectors.groupingBy(String::length, LinkedHashMap::new, Collectors
+                        .filtering(s-> s.contains("e"),Collectors.toList())));
+			
+ //partition but return is set instead of list
+
+        Map<Boolean, Set<Instructor>> partitionSet = Instructors.getAll()
+                .stream().collect(Collectors.partitioningBy(experiencePredicate,
+                        Collectors.toSet()));
+        partitionSet.forEach((key,value) -> {
+            System.out.println("key = " + key + " value: " + value);
+        });
+
+```
+### Parallel Stream
+```java
+public static int sumParallelStream(){
+        return IntStream.rangeClosed(0,50000).parallel().sum();
+    }
+    
+
+```
+### Optional
+```java
+//A container object which may or may not contain a non-null value. If a value is present, isPresent() will return true and get() will return the value.
+    static <T> Optional<T>	empty()
+![image](https://user-images.githubusercontent.com/69948118/175802187-5b0814db-9cc0-4e2a-bbe0-6d9c979a1b82.png)
+
+
 ```
 
 ```java
+    
+
+```
+
+```java
+    
+
+```
+
+```java
+    
+
+```
+
+```java
+    
 
 ```
 
