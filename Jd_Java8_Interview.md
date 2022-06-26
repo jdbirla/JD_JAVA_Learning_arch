@@ -485,10 +485,8 @@ public static int sumParallelStream(){
 ```java
 //A container object which may or may not contain a non-null value. If a value is present, isPresent() will return true and get() will return the value.
     static <T> Optional<T>	empty()
-![image](https://user-images.githubusercontent.com/69948118/175802187-5b0814db-9cc0-4e2a-bbe0-6d9c979a1b82.png)
-
-
 ```
+![image](https://user-images.githubusercontent.com/69948118/175802247-d46a7199-b684-417c-bd86-864ac29d0172.png)
 
 ```java
     
