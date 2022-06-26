@@ -231,12 +231,47 @@ Stream<T> sorted()
 For ordered streams, the sort is stable. For unordered streams, no stability guarantees are made.
 Stream<T> sorted(Comparator<? super T> comparator)
 
+ex. customized sort using comparator
+ //retuning all instructors sorted by their name
+        List<Instructor> list = Instructors.getAll().stream()
+                            .sorted(Comparator.comparing(Instructor::getName).reversed())
+                            .collect(Collectors.toList());
+
+        list.forEach(System.out::println);
+
+
 // 
 
 ```
-### 
+### Reduce repeated process for each elements with give operation like csum,multipication, comparison
 ```java
+ List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        int results = numbers.stream()
+                     //0 +1 = 1        //10+5= 15    //36+9=45
+                    //1 + 2 = 3        //15+ 6= 21
+                    //3 + 3 = 6        //21+7 = 28
+                    //6+ 4 = 10        //28+8 = 36
+                    .reduce(0,(a,b) -> a +b);
 
+        //1 * 1 = 1     //0*1 = 0
+        //1 * 2 = 2     //0*2=0
+        int results1 = numbers.stream().reduce(1,(a,b) -> a* b);
+        System.out.println(results);
+        System.out.println(results1);
+
+        Optional result2 = numbers.stream().reduce((a, b) -> a + b);
+        System.out.println("--------");
+        if(result2.isPresent())
+            System.out.println(result2.get());
+	    ----
+	      //printing the instructor who has the highest years of experience
+        Optional instructor = Instructors.getAll().stream()
+                .reduce((s1,s2)-> s2.getYearsOfExperience()
+                        >s1.getYearsOfExperience()?s2:s1);
+        if(instructor.isPresent())
+            System.out.println(instructor.get());
+
+    }
 ```
 
 ```java
