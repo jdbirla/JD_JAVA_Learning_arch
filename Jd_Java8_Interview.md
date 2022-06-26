@@ -366,17 +366,39 @@ List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8);
         numbers = IntStream.rangeClosed(1,5);
         numbers.forEach(System.out::println);
 ```
-###
+## Collectors Operations
 ```java
+ //Implementations of Collector that implement various useful reduction operations, such as accumulating elements into collections, summarizing elements according to  //various criteria, etc.
+// Accumulate names into a List
+     List<String> list = people.stream().map(Person::getName).collect(Collectors.toList());
 
-```
+     // Accumulate names into a TreeSet
+     Set<String> set = people.stream().map(Person::getName).collect(Collectors.toCollection(TreeSet::new));
 
-```java
+     // Convert elements to strings and concatenate them, separated by commas
+     String joined = things.stream()
+                           .map(Object::toString)
+                           .collect(Collectors.joining(", "));
 
-```
+     // Compute sum of salaries of employee
+     int total = employees.stream()
+                          .collect(Collectors.summingInt(Employee::getSalary)));
 
-```java
+     // Group employees by department
+     Map<Department, List<Employee>> byDept
+         = employees.stream()
+                    .collect(Collectors.groupingBy(Employee::getDepartment));
 
+     // Compute sum of salaries by department
+     Map<Department, Integer> totalByDept
+         = employees.stream()
+                    .collect(Collectors.groupingBy(Employee::getDepartment,
+                                                   Collectors.summingInt(Employee::getSalary)));
+
+     // Partition students into passing and failing
+     Map<Boolean, List<Student>> passingFailing =
+         students.stream()
+                 .collect(Collectors.partitioningBy(s -> s.getGrade() >= PASS_THRESHOLD));
 ```
 
 ```java
