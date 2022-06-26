@@ -25,10 +25,69 @@ public static List<Instructor> getAll(){
 ```
 ### Consumer
 ```java
+ List<Instructor> instructors = Instructors.getAll();
+        Consumer jdprint = (s1) -> System.out.print("   ::  -->");
+        Consumer jdprint1 = (s1) -> System.out.print("\n");
+	
   instructors.forEach(s1->{ 
 			  if(s1.yearsOfExperience > 5 && s1.isOnlineCourses())
 			  {
 		  c1.andThen(jdprint).andThen(c2).andThen(jdprint1).accept(s1); } }
 		  );
 ```
- 
+### Predictate
+```java
+List<Instructor> instructors = Instructors.getAll();
+        BiPredicate<Boolean, Integer> p3 = (online, experience) -> online==true && experience>10;
+
+        //Biconsumer print name and courses
+        BiConsumer<String, List<String>> biConsumer = (name, courses) ->
+                System.out.println("name is: " + name + " courses : " + courses);
+
+        instructors.forEach(instructor -> {
+            if(p3.test(instructor.isOnlineCourses(), instructor.getYearsOfExperience()))
+                biConsumer.accept(instructor.getName(), instructor.getCourses());
+        });
+```
+ ### Function
+ ```java
+   //Map of instructors with name and years of experience
+        //Function which will List<Instructors> and return a Map<String, Integer>
+        //Predicate will return true if instructor has online courses
+        Predicate<Instructor> p1 = (i) -> i.isOnlineCourses()==true;
+        Function<List<Instructor>, Map<String,Integer>> mapFunction = (instructors -> {
+            Map<String,Integer> map = new HashMap<>();
+            instructors.forEach(instructor -> {
+                if(p1.test(instructor)) {
+                    map.put(instructor.getName(), instructor.getYearsOfExperience());
+                }
+            });
+            return map;
+        });
+
+        System.out.println(mapFunction.apply(Instructors.getAll()));
+    }
+    
+   //BiFunction
+    //Bifuction 2 inputs List<Instructors> and second is predicate which will filter if instructor has online
+        //courses and return a map of <String,Integer> string is name and Integer is the years of experience
+
+        Predicate<Instructor> p1 = (i) -> i.isOnlineCourses()==true;
+        BiFunction<List<Instructor>, Predicate<Instructor>, Map<String,Integer>> mapBiFunction =
+                ((instructors, instructorPredicate) -> {
+                    Map<String, Integer> map = new HashMap<>();
+                    instructors.forEach(instructor -> {
+                        if(instructorPredicate.test(instructor)){
+                            map.put(instructor.getName(), instructor.getYearsOfExperience());
+                        }
+                    });
+                    return map;
+                });
+        System.out.println(mapBiFunction.apply(Instructors.getAll(), p1));
+   
+```
+### Supplier
+```java
+ Supplier<Integer> supplier = () -> (int) (Math.random() * 1000);
+        System.out.println(supplier.get());
+```
