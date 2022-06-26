@@ -273,23 +273,100 @@ ex. customized sort using comparator
 
     }
 ```
+#### Max using 3 different approaches
+```java
+List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8);
+        //max using stream max function
+        Optional result = numbers.stream().max(Integer::compareTo);
+        if(result.isPresent())
+            System.out.println(result.get());
+        //(0,1) - 1   // return 0
+        //(1,2) - 2
+        //(2,3) - 3
+        int result2 = numbers.stream().reduce(0,(a,b)-> a>b?a:b);
+        Optional result3 = numbers.stream().reduce((a,b)->a>b?a:b);
+        if(result3.isPresent())
+            System.out.println(result3.get());
+
+        Optional result4 = numbers.stream().reduce(Integer::max);
+        if(result4.isPresent())
+            System.out.println(result4.get());
+
+
+    }
+```
+#### Min using 3 different approaches
 
 ```java
+ public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8);
+        //Stream min function
+        Optional result = numbers.stream().min(Integer::compareTo);
+        if(result.isPresent())
+        System.out.println(result.get());
 
+        //reduce function
+        //(0,1) - 0  //(0,3) - 0
+        //(0,2) - 0
+        int result1 = numbers.stream().reduce(0,(a,b) -> a<b?a:b);
+        System.out.println(result1);
+
+        Optional result2 = numbers.stream().reduce((a,b) -> a<b?a:b);
+        if(result2.isPresent())
+            System.out.println(result2.get());
+
+        Optional result3 = numbers.stream().reduce(Integer::min);
+        if(result3.isPresent())
+            System.out.println(result3.get());
+
+
+    }
 ```
-
+###  Streams Generators
 ```java
+//of
+        Stream<Integer> stream = Stream.of(1,2,3,4,5,6,7,8);
+        stream.forEach(System.out::println);
 
+        System.out.println("-----------");
+        //iterate generate a stream of 10 even numbers
+        Stream<Integer> stream1 = Stream.iterate(0,i->i+2).limit(10);
+        stream1.forEach(System.out::println);
+
+        System.out.println("--------------");
+        //generate 10 random numbers
+        Stream<Integer> stream2 = Stream.generate(new Random()::nextInt).limit(10);
+        stream2.forEach(System.out::println);
 ```
-
+### intStream,LongStream,DoubleStream
 ```java
+    //using of
+        IntStream numbers = IntStream.of(1,2,3,4,5);
+        numbers.forEach(System.out::println);
 
+        System.out.println("-----------");
+        //iterate
+        numbers = IntStream.iterate(0, i-> i+2).limit(5);
+        numbers.forEach(System.out::println);
+
+        System.out.println("-----------");
+        //Random Generator
+        numbers=IntStream.generate(new Random()::nextInt).limit(5);
+        numbers.forEach(System.out::println);
+
+        System.out.println("-----------");
+        //range
+
+        numbers = IntStream.range(1,5);
+        numbers.forEach(System.out::println);
+
+        System.out.println("-----------");
+
+        //rangeClosed
+        numbers = IntStream.rangeClosed(1,5);
+        numbers.forEach(System.out::println);
 ```
-
-```java
-
-```
-
+###
 ```java
 
 ```
