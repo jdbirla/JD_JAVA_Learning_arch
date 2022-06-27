@@ -71,10 +71,13 @@ You can also import the project in your favorite IDE:
 
 ![image](https://user-images.githubusercontent.com/69948118/176044065-20e0a33d-4c53-4b92-be59-324fd63a6245.png)
 
-Chapter 2. Passing code with behavior Parameterization
+---
+### Chapter 2. Passing code with behavior Parameterization
 
 ![image](https://user-images.githubusercontent.com/69948118/176044290-b4628d1d-f68a-49c7-af69-99778d7494fe.png)
-Chapter 3. Lambda expressions
+
+---
+### Chapter 3. Lambda expressions
  ![image](https://user-images.githubusercontent.com/69948118/176044354-a315a8a8-e915-4887-baf4-768640c84480.png)
 
 ![image](https://user-images.githubusercontent.com/69948118/176044369-adad87a4-a719-4d33-a3d1-4cac2c1d432d.png)
@@ -102,11 +105,13 @@ Table 3.2. Common functional interfaces in Java 8
 ![image](https://user-images.githubusercontent.com/69948118/176044580-b84170ca-4e36-487f-8a22-9dd9634dcf4d.png)
 
 
-Chapter 4. Introducing streams
+---
+### Chapter 4. Introducing streams
 
 ![image](https://user-images.githubusercontent.com/69948118/176044602-100d0f7a-7f6c-4817-9e26-42fb930344cc.png)
 
-Chapter 5. Working with streams
+---
+### Chapter 5. Working with streams
 ![image](https://user-images.githubusercontent.com/69948118/176044837-c0aae1c8-49bc-49bf-b0c1-0aca252cd7c7.png)
 ![image](https://user-images.githubusercontent.com/69948118/176044853-a464e60e-11eb-450d-9a81-c8839e31a3ae.png)
 
@@ -196,7 +201,8 @@ return transactions;
 ![image](https://user-images.githubusercontent.com/69948118/176044894-5b0e5b23-7a3d-4252-80fa-ca1897ca36dc.png)
 
 
-Chapter 6. Collecting data with streams
+---
+### Chapter 6. Collecting data with streams
 Table 6.1. The static factory methods of the Collectors class
 
 | Factory      method      | Returned type                                               | Used to                                                                                                                                                                                           | Example use                                                                                                                                       |
@@ -220,7 +226,8 @@ Table 6.1. The static factory methods of the Collectors class
 
 ![image](https://user-images.githubusercontent.com/69948118/176047906-bd4932b9-cdfe-4511-a8b2-fc9bd96fcdd2.png)
 
-   Chapter 7. Parallel data processing and performance
+---
+### Chapter 7. Parallel data processing and performance
 
 ![image](https://user-images.githubusercontent.com/69948118/176047933-ed286fde-9bf3-4a1d-b991-9411918a35bf.png)
 ![image](https://user-images.githubusercontent.com/69948118/176047944-5970a90e-22e6-4fb9-8583-19414ef07a09.png)
@@ -237,7 +244,8 @@ Table 7.1. Stream sources and decomposability
    
    ![image](https://user-images.githubusercontent.com/69948118/176048076-d1720885-3033-4d02-8083-30ff18a87793.png)
 
-   Chapter 8. Refactoring, testing, and debugging
+---
+### Chapter 8. Refactoring, testing, and debugging
 
  ![image](https://user-images.githubusercontent.com/69948118/176048096-41ec0e7f-0991-4688-8988-b74458436b5e.png)
 
@@ -246,17 +254,22 @@ Table 7.1. Stream sources and decomposability
    ![image](https://user-images.githubusercontent.com/69948118/176048115-586c2c9f-ee87-4a68-9673-2e80315d51cf.png)
    
    ![image](https://user-images.githubusercontent.com/69948118/176048129-17473e36-c553-4c65-9152-38a4e708a2d8.png)
-Chapter 9. Default methods
+
+   
+---
+### Chapter 9. Default methods
 ![image](https://user-images.githubusercontent.com/69948118/176048145-b3fff884-cc66-47e1-b95e-b70ceafc5b43.png)
 ![image](https://user-images.githubusercontent.com/69948118/176048155-2068ee1f-4797-4767-958a-c118e9e31168.png)
    
-   Chapter 10. Using Optional as a better alternative to
+---
+### Chapter 10. Using Optional as a better alternative to
 Null
 
 ![image](https://user-images.githubusercontent.com/69948118/176048183-015ddd81-f270-4903-937d-177b510b4f5e.png)
 ![image](https://user-images.githubusercontent.com/69948118/176048193-8b3be9b0-9799-4809-8a90-2ad404ce19e9.png)
 
-   Chapter 11. CompletableFuture: composable
+---
+### Chapter 11. CompletableFuture: composable
 asynchronous programming
 ![image](https://user-images.githubusercontent.com/69948118/176048225-3e1bff2a-fe33-477e-a35a-747882609927.png)
    ![image](https://user-images.githubusercontent.com/69948118/176048235-84794526-b2c5-456a-bd49-00861ca133b1.png)
@@ -267,7 +280,8 @@ asynchronous programming
 ![image](https://user-images.githubusercontent.com/69948118/176048357-d8a6dcc3-541d-430f-b82a-36f051b489f6.png)
    ![image](https://user-images.githubusercontent.com/69948118/176048384-8f58874e-1a2d-4810-b70a-fa68c53ece6f.png)
    
-   Chapter 12. New Date and Time API
+---
+### Chapter 12. New Date and Time API
    
    ![image](https://user-images.githubusercontent.com/69948118/176048417-1c8f33f6-26d9-44ba-ac7b-163cfcd0e6ae.png)
 
