@@ -197,15 +197,78 @@ return transactions;
 
 
 Chapter 6. Collecting data with streams
+Table 6.1. The static factory methods of the Collectors class
+
+| Factory      method      | Returned type                                               | Used to                                                                                                                                                                                           | Example use                                                                                                                                       |
+|--------------------------|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+|     toList               |     List<T>                                                 |     Gather all the stream’s items in a List.                                                                                                                                                      |     Example use: List<Dish> dishes = menuStream.collect(toList());                                                                                |
+|     toSet                |     Set<T>                                                  |     Gather all the   stream’s items in a Set, eliminating     duplicates.                                                                                                                         |     Example use: Set<Dish> dishes = menuStream.collect(toSet());                                                                                  |
+|     toCollection         |     Collection<T>                                           |     Gather all the   stream’s items in the collection created     by the provided supplier.                                                                                                       |     Example use: Collection<Dish> dishes =   menuStream.collect(toCollection(), ArrayList::new);                                                  |
+|     counting             |     Long                                                    |     Count the number of items in the stream.                                                                                                                                                      |     Example use: long howManyDishes = menuStream.collect(counting());                                                                             |
+|     summingInt           |     Integer                                                 |     Sum the values of   an Integer property of the items in     the stream.                                                                                                                       |     Example use: int totalCalories = menuStream.collect(summingInt(Dish::getCalories));                                                           |
+|     averagingInt         |     Double                                                  |     Calculate the   average value of an Integer property of     the items in the stream.                                                                                                          |     Example use: double avgCalories =   menuStream.collect(averagingInt(Dish::getCalories));                                                      |
+|     summarizingInt       |     IntSummary-Statistics                                   |     Collect statistics   regarding an Integer property of the     items in the stream, such as   the maximum, minimum, total, and average.                                                        |     Example use:   IntSummaryStatistics menuStatistics =     menuStream.collect(summarizingInt(Dish::getCalories));                               |
+|         joining          |     String                                                  |     Concatenate the   strings resulting from the invocation     of the toString method on each item of the stream                                                                                 |     Example use: String shortMenu =   menuStream.map(Dish::getName).collect(joining(", "));                                                       |
+|     maxBy                |     Optional<T>                                             |     An Optional   wrapping the maximal element in this     stream according to   the given comparator or     Optional.empty() if the stream is empty.                                             |     Example use: Optional<Dish> fattest =   menuStream.collect(maxBy(comparingInt(Dish::getCalories)));                                           |
+|     minBy                |     Optional<T>                                             |     An Optional   wrapping the minimal element in this     stream according to   the given comparator or     Optional.empty() if the stream is empty.                                             |     Example use: Optional<Dish> lightest =   menuStream.collect(minBy(comparingInt(Dish::getCalories)));                                          |
+|     reducing             |     The type produced   by the     reduction operation      |     Reduce the stream   to a single value starting from an     initial value used   as accumulator and iteratively     combining it with   each item of the stream using a     BinaryOperator.    |     Example use: int totalCalories = menuStream.collect(reducing(0, Dish::getCalories,   Integer::sum));                                          |
+|     collectingAndThen    |     The type returned   by the     transforming function    |     Wrap another   collector and apply a transformation     function to its result                                                                                                                |     Example use: int howManyDishes = menuStream.collect(collectingAndThen(toList(),   List::size));                                               |
+|     groupingBy           |     Map<K, List<T>>                                         |     Group the items in   the stream based on the value of     one of their   properties and use those values as keys in     the resulting Map.                                                    |     Example use:   Map<Dish.Type, List<Dish>> dishesByType =     menuStream.collect(groupingBy(Dish::getType));                                   |
+|     partitioningBy       |     Map<Boolean,   List<T>>                                 |     Partition the items   in the stream based on the result of     the application of a predicate to each of them.                                                                                |     Example use:   Map<Boolean, List<Dish>> vegetarianDishes =     menuStream.collect(partitioningBy(Dish::isVegetarian));                        |
 
 
 
+![image](https://user-images.githubusercontent.com/69948118/176047906-bd4932b9-cdfe-4511-a8b2-fc9bd96fcdd2.png)
 
+   Chapter 7. Parallel data processing and performance
 
+![image](https://user-images.githubusercontent.com/69948118/176047933-ed286fde-9bf3-4a1d-b991-9411918a35bf.png)
+![image](https://user-images.githubusercontent.com/69948118/176047944-5970a90e-22e6-4fb9-8583-19414ef07a09.png)
+Table 7.1. Stream sources and decomposability
+ |     Source             |     Decomposability    |
+|------------------------|------------------------|
+|     ArrayList          |     Excellent          |
+|     LinkedList         |     Poor               |
+|     IntStream.range    |     Excellent          |
+|     Stream.iterate     |     Poor               |
+|     Stream.iterate     |     Poor               |
+|     HashSet            |     Good               |
+|     TreeSet            |     Good               |
+   
+   ![image](https://user-images.githubusercontent.com/69948118/176048076-d1720885-3033-4d02-8083-30ff18a87793.png)
 
+   Chapter 8. Refactoring, testing, and debugging
 
+ ![image](https://user-images.githubusercontent.com/69948118/176048096-41ec0e7f-0991-4688-8988-b74458436b5e.png)
 
- 
+![image](https://user-images.githubusercontent.com/69948118/176048102-5a5c2bc5-151d-45be-9cc4-b9cb6d6282c6.png)
+   
+   ![image](https://user-images.githubusercontent.com/69948118/176048115-586c2c9f-ee87-4a68-9673-2e80315d51cf.png)
+   
+   ![image](https://user-images.githubusercontent.com/69948118/176048129-17473e36-c553-4c65-9152-38a4e708a2d8.png)
+Chapter 9. Default methods
+![image](https://user-images.githubusercontent.com/69948118/176048145-b3fff884-cc66-47e1-b95e-b70ceafc5b43.png)
+![image](https://user-images.githubusercontent.com/69948118/176048155-2068ee1f-4797-4767-958a-c118e9e31168.png)
+   
+   Chapter 10. Using Optional as a better alternative to
+Null
 
+![image](https://user-images.githubusercontent.com/69948118/176048183-015ddd81-f270-4903-937d-177b510b4f5e.png)
+![image](https://user-images.githubusercontent.com/69948118/176048193-8b3be9b0-9799-4809-8a90-2ad404ce19e9.png)
+
+   Chapter 11. CompletableFuture: composable
+asynchronous programming
+![image](https://user-images.githubusercontent.com/69948118/176048225-3e1bff2a-fe33-477e-a35a-747882609927.png)
+   ![image](https://user-images.githubusercontent.com/69948118/176048235-84794526-b2c5-456a-bd49-00861ca133b1.png)
+   
+   ![image](https://user-images.githubusercontent.com/69948118/176048250-4aeffc6b-3ee0-4c15-8a90-f8db4834a3dd.png)
+   ![image](https://user-images.githubusercontent.com/69948118/176048265-a613ccb3-8542-46b2-a00d-606d091bd5ce.png)
+
+![image](https://user-images.githubusercontent.com/69948118/176048357-d8a6dcc3-541d-430f-b82a-36f051b489f6.png)
+   ![image](https://user-images.githubusercontent.com/69948118/176048384-8f58874e-1a2d-4810-b70a-fa68c53ece6f.png)
+   
+   Chapter 12. New Date and Time API
+   
+   ![image](https://user-images.githubusercontent.com/69948118/176048417-1c8f33f6-26d9-44ba-ac7b-163cfcd0e6ae.png)
 
 
