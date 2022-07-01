@@ -213,7 +213,10 @@ List<Instructor> instructors = Instructors.getAll();
   //limit :: Returns a stream consisting of the elements of this stream, truncated to be no longer than maxSize in length.
   Stream<T>	limit(long maxSize)
 	
-
+	///
+	Comparator<Developer> salaryComparator = (o1, o2)->o1.getSalary().compareTo(o2.getSalary());
+	listDevs.sort(salaryComparator);
+///
 // max :: Returns the maximum element of this stream according to the provided Comparator. This is a special case of a reduction.
 Optional<T> max(Comparator<? super T> comparator)
 
