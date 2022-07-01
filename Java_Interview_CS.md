@@ -313,6 +313,36 @@ causes the thread in execution to go to sleep for specified number of millisecon
 |Behavioral Design Pattern|Observer Pattern| ```java     TV sonyOldRemote = new Sony(new OldRemote());  TV sonyNewRemote = new Sony(new NewRemote());```| 
 
 
+---
+### Code Quality 
 
+sonar-example
+
+What is sonar how to get start with it | Example
+```
+Plugins:
+org.sonarsource.scanner.maven sonar-maven-plugin 3.4.0.905 org.jacoco jacoco-maven-plugin 0.8.1
+
+jacoco cmd:
+
+clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+sonar cmd:
+
+mvn sonar:sonar
+
+```
+
+1.  Install the SonarQube plugin for Eclipse.
+
+2.  Configure your SonarQube server.
+
+3.  Link your workspace project to the copy on SonarQube.
+
+4.  Add the SonarQube views to your current perspective.
+
+---
+
+### Logging
+![image](https://user-images.githubusercontent.com/69948118/176835148-7c435a1c-3fd4-4647-97c3-0a358f600560.png)
 
 
