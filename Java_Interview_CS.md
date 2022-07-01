@@ -290,3 +290,29 @@ can immediately put the thread back to RUNNING state.
 ### Thread sleep method
 sleep is a static method in Thread class. sleep method can throw a InterruptedException. sleep method
 causes the thread in execution to go to sleep for specified number of milliseconds.
+
+----
+
+## Design Pattern
+![image](https://user-images.githubusercontent.com/69948118/172313772-21bf1902-2c87-4faa-89a5-7aa5fa772a1e.png)
+
+### Quick Remind
+|Type|Pattern Name |Example|
+|---|---|---|
+|Creational Design Pattern|Singleton Pattern|SingletonEagar,SingletonSynchronized | 
+|Creational Design Pattern|Factory Pattern|```java class VehicleFactory {   public static Vehicle getInstance(String type, int wheel) {     if(type == "car") {       return new Car(wheel);     } else if(type == "bike") {       return new Bike(wheel);     }``` | 
+|Creational Design Pattern|Prototype Pattern|```java   Vehicle b = (Vehicle) a.clone();``` | 
+|Creational Design Pattern|Builder Pattern|```java  Vehicle car = new Vehicle.VehicleBuilder("1500cc", 4).setAirbags(4).build();     Vehicle bike = new Vehicle.VehicleBuilder("250cc", 2).build();``` |
+|--------------------------|-----------------|-----------------|
+|Structural Design Pattern|Adapter Pattern| ```java  ChromeDriver a = new ChromeDriver();     a.getElement();     a.selectElement();  	IEDriver e = new IEDriver();     e.findElement();     e.clickElement();         WebDriver wID = new WebDriverAdapter(e);     wID.getElement();     wID.selectElement(); ```| 
+|Structural Design Pattern|Bridge Pattern| Row 2 Column 2|
+|Structural Design Pattern|Composite Pattern| ```java  CompositeAccount component = new CompositeAccount();     component.addAccount(new DepositeAccount("DA001", 100));     component.addAccount(new DepositeAccount("DA002", 150));     component.addAccount(new SavingAccount("SA001", 200));```| 
+|Structural Design Pattern|Facade Pattern|```java WebExplorerHelperFacade.generateReports("firefox", "html", test); WebExplorerHelperFacade.generateReports("firefox", "junit", test);```| 
+|Structural Design Pattern|Proxy Pattern| ```java   DatabaseExecuter nonAdminExecuter = new DatabaseExecuterProxy("NonAdmin", "Admin@123");``` | 
+|--------------------------|-----------------|-----------------|
+|Behavioral Design Pattern|Observer Pattern| ```java     TV sonyOldRemote = new Sony(new OldRemote());  TV sonyNewRemote = new Sony(new NewRemote());```| 
+
+
+
+
+
