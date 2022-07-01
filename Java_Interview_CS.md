@@ -466,3 +466,8 @@ public class SomeBusinessMockAnnotationsTest {
 	}
 }
 ```
+### TesNG
+![image](https://user-images.githubusercontent.com/69948118/176839452-40ab761a-414b-4e37-81c8-b203368c35f3.png)
+![image](https://user-images.githubusercontent.com/69948118/176839667-6b1ec809-0c78-4c99-acd1-896b81c3062f.png)
+
+
