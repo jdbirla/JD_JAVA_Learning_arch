@@ -345,4 +345,124 @@ mvn sonar:sonar
 ### Logging
 ![image](https://user-images.githubusercontent.com/69948118/176835148-7c435a1c-3fd4-4647-97c3-0a358f600560.png)
 
+---
+### Unit Testing
 
+#### Junit
+```java 
+@Test public void test() { boolean condn = true; assertEquals(true, condn); assertTrue(condn); // assertFalse(condn); }
+```
+#### Junit + Mockito
+```java
+    package com.in28minutes.business;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+import java.util.Arrays;
+import java.util.List;
+import org.junit.Test;
+import com.in28minutes.data.api.TodoService;
+public class TodoBusinessImplMockitoTest {
+	@Test
+	public void usingMockito() {
+		TodoService todoService = mock(TodoService.class);
+		List<String> allTodos = Arrays.asList("Learn Spring MVC",
+				"Learn Spring", "Learn to Dance");
+		when(todoService.retrieveTodos("Ranga")).thenReturn(allTodos);
+		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoService);
+		List<String> todos = todoBusinessImpl
+				.retrieveTodosRelatedToSpring("Ranga");
+		assertEquals(2, todos.size());
+	}
+}
+```
+#### Spring Unit Testing and Mockito
+
+```java
+@RunWith(SpringRunner.class)/@RunWith(SpringJUnit4ClassRunner.class)
+public class SpringIn5StepsBasicApplicationTests 
+{ @Test public void contextLoads() { } }
+
+@RunWith(SpringRunner.class) @ContextConfiguration(classes = SpringIn5StepsBasicApplication.class) 
+public class BinarySearchTest { // Get this bean from the context @Autowired BinarySearchImpl binarySearch;
+
+```
+```java
+
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+
+@RunWith(MockitoJUnitRunner.class)
+public class SomeCdiBusinessTest {
+
+	// Inject Mock
+	@InjectMocks
+	SomeCdiBusiness business;
+
+	// Create Mock
+	@Mock
+	SomeCdiDao daoMock;
+
+	@Test
+	public void testBasicScenario() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] { 2, 4 });
+		assertEquals(4, business.findGreatest());
+	}
+
+	@Test
+	public void testBasicScenario_NoElements() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] { });
+		assertEquals(Integer.MIN_VALUE, business.findGreatest());
+	}
+
+	@Test
+	public void testBasicScenario_EqualElements() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] { 2,2});
+		assertEquals(2, business.findGreatest());
+	}
+
+}
+
+```
+
+#### Spring boot Unit Testing and Mockito
+
+```java
+package com.in28minutes.mockito.mockitodemo;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+@RunWith(MockitoJUnitRunner.class)
+public class SomeBusinessMockAnnotationsTest {
+	@Mock
+	DataService dataServiceMock;
+	@InjectMocks
+	SomeBusinessImpl businessImpl;
+	@Test
+	public void testFindTheGreatestFromAllData() {
+		when(dataServiceMock.retrieveAllData()).thenReturn(new int[] { 24, 15, 3 });
+		assertEquals(24, businessImpl.findTheGreatestFromAllData());
+	}
+	@Test
+	public void testFindTheGreatestFromAllData_ForOneValue() {
+		when(dataServiceMock.retrieveAllData()).thenReturn(new int[] { 15 });
+		assertEquals(15, businessImpl.findTheGreatestFromAllData());
+	}
+	@Test
+	public void testFindTheGreatestFromAllData_NoValues() {
+		when(dataServiceMock.retrieveAllData()).thenReturn(new int[] {});
+		assertEquals(Integer.MIN_VALUE, businessImpl.findTheGreatestFromAllData());
+	}
+}
+```
