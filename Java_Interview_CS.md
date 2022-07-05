@@ -1,5 +1,12 @@
 # Java 7 Interview CS
 
+## Durga Core java Concept
+###  Abstract 
+- Abstract for class and method,  Abstract class can't initaited.
+- Abstract class can have final method but final class can't have abstract method
+### Member level and Method Level 
+
+
 ### What are the important things to consider when implementing equals method?
 Any equals implementation should satisfy these properties:
 1. Reflexive. For any reference value x, x.equals(x) returns true.
