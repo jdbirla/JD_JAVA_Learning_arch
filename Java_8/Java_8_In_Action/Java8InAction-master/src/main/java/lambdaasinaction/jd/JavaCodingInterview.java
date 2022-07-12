@@ -259,11 +259,6 @@ public class JavaCodingInterview {
 	   System.out.println("-========================================================");
 
       System.out.println("Que 12: Reduce operation practice");
-	
-      
-      
-      
-      
       List<Integer> numbers = Arrays.asList(3, 7, 8, 1, 5, 9);
 
 	   Optional<Integer> reduce = numbers.stream().reduce((a,b)->a+b);
