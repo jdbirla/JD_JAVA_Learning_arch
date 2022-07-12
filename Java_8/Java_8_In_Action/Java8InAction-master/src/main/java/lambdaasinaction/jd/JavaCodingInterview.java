@@ -7,12 +7,16 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+
+
 
 public class JavaCodingInterview {
 
@@ -93,7 +97,13 @@ public class JavaCodingInterview {
         	 }
          }
          System.out.println(cntmap);
-      
+         System.out.println("-------------------------------------------------");
+         String someString1 = "Jitendra Birla";
+         // String[] arrstr =  someString1.split("");  
+          String[] arrstr =  someString1.replaceAll("\\W","").split("");   
+           Stream s1 = Arrays.stream(arrstr);
+           Map<String, Long> collectjd= (Map<String, Long>) s1.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+           System.out.println(collectjd);
         System.out.println("-========================================================");
 
         System.out.println("Que4: Given a list of integers, find out all the even numbers exist in the list using Stream functions?");
@@ -244,12 +254,56 @@ public class JavaCodingInterview {
 	  List<String> collect6 = customers.stream().flatMap(a-> a.getPhoneNumbers().stream()).collect(Collectors.toList());
 		
 	  System.out.println(collect6);
-	}
-	
-	
-}
+	  
 
-interface MultiplyInterface
+	   System.out.println("-========================================================");
+
+      System.out.println("Que 12: Reduce operation practice");
+	
+      
+      
+      
+      
+      List<Integer> numbers = Arrays.asList(3, 7, 8, 1, 5, 9);
+
+	   Optional<Integer> reduce = numbers.stream().reduce((a,b)->a+b);
+	   if(reduce.isPresent())
+		   System.out.println(reduce.get());
+	   Optional<Integer> reduce1 = numbers.stream().reduce(Integer::sum);
+	   if(reduce1.isPresent())
+		   System.out.println(reduce1.get());
+     
+	   Integer maxval = numbers.stream().reduce(0,(a,b) -> a>b?a:b);
+		   System.out.println(maxval);
+		   
+		   Integer maxval2 = numbers.stream().reduce(Integer::max).get();
+		   System.out.println(maxval2);
+
+
+	  List<String> words = Arrays.asList("corejava", "spring", "hibernate");
+	  Optional<String> reduce2 = words.stream().reduce((a,b) -> a.length()>b.length()?a:b);
+	  System.out.println(reduce2.get());
+
+	  Double asa = EmployeeDatabase.getEmployees().stream().filter(A -> A.getGrade()=="A").map(Employee::getSalary).mapToDouble(a->a).average().getAsDouble();
+	
+	System.out.println(asa);
+	   System.out.println("-========================================================");
+
+	      System.out.println("Que 12: Assume you have list of employee in various dept, WAP to find highest paid employee from each dept");
+		
+	      BinaryOperator<Employee> be = (a,b) -> a.getSalary()>b.getSalary()?a:b;
+	      Map<String, Optional<Employee>> collect7 = EmployeeDatabase.getEmployees().stream().collect(
+	    		  Collectors.groupingBy(
+	    				  Employee::getDept,Collectors.reducing(be))
+	    		  );
+	      
+	
+	}
+
+  
+};
+
+ interface MultiplyInterface
 {
 	    public int multiply(int a, int b);
 	   
@@ -307,7 +361,6 @@ interface MultiplyInterface
 };
  class EkartDataBase {
 
-
     public static List<Customer> getAll() {
         return Stream.of(
                 new Customer(101, "john", "john@gmail.com", Arrays.asList("397937955", "21654725")),
@@ -315,7 +368,90 @@ interface MultiplyInterface
                 new Customer(103, "peter", "peter@gmail.com", Arrays.asList("38946328654", "3286487236")),
                 new Customer(104, "kely", "kely@gmail.com", Arrays.asList("389246829364", "948609467"))
         ).collect(Collectors.toList());
+    };
+ }
+  
+
+class Employee {
+        private int id;
+        private String name;
+        private String grade;
+        private String dept;
+        private double salary;
+
+        public Employee() {
+        }
+
+		public Employee(int id, String name, String grade, String dept, double salary) {
+			super();
+			this.id = id;
+			this.name = name;
+			this.grade = grade;
+			this.dept = dept;
+			this.salary = salary;
+		}
+
+		public int getId() {
+			return id;
+		}
+
+		public void setId(int id) {
+			this.id = id;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getGrade() {
+			return grade;
+		}
+
+		public void setGrade(String grade) {
+			this.grade = grade;
+		}
+
+		public String getDept() {
+			return dept;
+		}
+
+		public void setDept(String dept) {
+			this.dept = dept;
+		}
+
+		public double getSalary() {
+			return salary;
+		}
+
+		public void setSalary(double salary) {
+			this.salary = salary;
+		}
+
+		@Override
+		public String toString() {
+			return "Employee [id=" + id + ", name=" + name + ", grade=" + grade + ", dept=" + dept + ", salary="
+					+ salary + "]";
+		}
+
+
+
+        
+
+    };
+    
+     class EmployeeDatabase {
+
+
+        public static List<Employee> getEmployees(){
+          return  Stream.of(new Employee(101,"john","A","DEV",60000),
+                  new Employee(109,"peter","B","DEV",30000),
+                  new Employee(102,"mak","A","QA",80000),
+                  new Employee(103,"kim","A","QA",90000),
+                  new Employee(104,"json","C","DEVOPS",15000))
+                  .collect(Collectors.toList());
+        }
     }
-
-
-};
