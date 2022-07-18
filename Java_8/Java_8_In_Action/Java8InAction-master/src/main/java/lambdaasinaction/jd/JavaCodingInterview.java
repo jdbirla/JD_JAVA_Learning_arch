@@ -291,8 +291,8 @@ public class JavaCodingInterview {
 	    		  Collectors.groupingBy(
 	    				  Employee::getDept,Collectors.reducing(be))
 	    		  );
-	      
-	
+	        System.out.println("Que 12:Programe to sort employee data base on salary and return in Map");
+	// https://javarevisited.blogspot.com/2017/09/java-8-sorting-hashmap-by-values-in.html#axzz7ZNa70ML6
 	}
 
   
