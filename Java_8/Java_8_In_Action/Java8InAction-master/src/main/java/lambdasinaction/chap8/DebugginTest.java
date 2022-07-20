@@ -1,14 +1,13 @@
 package lambdasinaction.chap8;
 
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import org.junit.Test;
 
-import lambdasinaction.chap6.ToListCollector;
 import lambdasinaction.chap8.Debugging.Point;
 
 public class DebugginTest {
@@ -21,6 +20,7 @@ public class DebugginTest {
 	Arrays.asList(new Point(15, 5), new Point(20, 5));
 	//List<Point> newPoints = points.stream().map(p-> new Point(p.getX() + 10, p.getY())).collect(ToListCollector<Point>());
 	//assertEquals(expectedPoints, newPoints);
-	}
+
 	
+	}
 }
