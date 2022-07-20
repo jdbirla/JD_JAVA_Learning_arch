@@ -27,6 +27,10 @@ public static List<Instructor> getAll(){
 ```
 ### Consumer
 ```java
+void accept(T t);
+default Consumer<T> andThen(Consumer<? super T> after)
+
+
  List<Instructor> instructors = Instructors.getAll();
         Consumer jdprint = (s1) -> System.out.print("   ::  -->");
         Consumer jdprint1 = (s1) -> System.out.print("\n");
@@ -39,6 +43,11 @@ public static List<Instructor> getAll(){
 ```
 ### Predictate
 ```java
+boolean test(T t);
+default Predicate<T> and(Predicate<? super T> other)
+default Predicate<T> negate()
+default Predicate<T> or(Predicate<? super T> other)
+
 List<Instructor> instructors = Instructors.getAll();
         BiPredicate<Boolean, Integer> p3 = (online, experience) -> online==true && experience>10;
 
@@ -53,6 +62,12 @@ List<Instructor> instructors = Instructors.getAll();
 ```
  ### Function
  ```java
+ R apply(T t);
+default <V> Function<V, R> compose(Function<? super V, ? extends T> before)
+default <V> Function<T, V> andThen(Function<? super R, ? extends V> after)
+static <T> Function<T, T> identity()
+
+
    //Map of instructors with name and years of experience
         //Function which will List<Instructors> and return a Map<String, Integer>
         //Predicate will return true if instructor has online courses
@@ -90,6 +105,7 @@ List<Instructor> instructors = Instructors.getAll();
 ```
 ### Supplier
 ```java
+T get();
  Supplier<Integer> supplier = () -> (int) (Math.random() * 1000);
         System.out.println(supplier.get());
 ```
