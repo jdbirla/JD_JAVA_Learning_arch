@@ -8,10 +8,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class StreamTest {
-
+	String name;
+	public StreamTest() {
+	this.name = "Default Name";
+	}
+	public StreamTest(String name) {
+		this.name = name;
+		}
 	public static void main(String[] args) {
-	
+		StreamTest animal = new StreamTest();
+
 	
 	}
+	
 
 }

@@ -289,8 +289,9 @@ public class JavaCodingInterview {
 		BinaryOperator<Employee> be = (a, b) -> a.getSalary() > b.getSalary() ? a : b;
 		Map<String, Optional<Employee>> collect7 = EmployeeDatabase.getEmployees().stream()
 				.collect(Collectors.groupingBy(Employee::getDept, Collectors.reducing(be)));
+		collect7.forEach( (k,v) -> System.out.println( "BinaryOperator:: Key : " + k  + "\t\t"  + "Value : "  + v.orElseGet(() -> new Employee())));
+
 		
-		collect7.forEach( (k,v) -> System.out.println( "Key : " + k  + "\t\t"  + "Value : "  + v.orElseGet(() -> new Employee())));
 		System.out.println("-========================================================");
 
 		System.out.println(
