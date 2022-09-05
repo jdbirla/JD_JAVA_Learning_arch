@@ -125,6 +125,10 @@ public class JavaCodingInterview {
 
 		System.out.println(collect6);
 
+	  List<String> collect10 = customers.stream().map(Customer::getPhoneNumbers).flatMap(List::stream).collect(Collectors.toList());
+
+		System.out.println(collect10);
+		
 		System.out.println(
 				"-=============================================================================================================");
 

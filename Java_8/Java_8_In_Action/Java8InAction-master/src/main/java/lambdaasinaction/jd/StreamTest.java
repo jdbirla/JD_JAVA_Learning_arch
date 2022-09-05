@@ -8,18 +8,12 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class StreamTest {
-	String name;
-	public StreamTest() {
-	this.name = "Default Name";
-	}
-	public StreamTest(String name) {
-		this.name = name;
-		}
-	public static void main(String[] args) {
-		StreamTest animal = new StreamTest();
+  public static void main(String[] args) {
+		String someString1 = "Jitendra Birla";
+		String[] arrstr = someString1.replaceAll("\\W", "").split("");
+		System.out.println(arrstr);
+		Arrays.stream(arrstr).sorted().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
+		.forEach((k,v) -> System.out.println(k +"  " +v));
 
-	
-	}
-	
-
+}
 }
